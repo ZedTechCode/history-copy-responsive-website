@@ -1,0 +1,292 @@
+/* variables */
+:root {
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+/* Reset Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Grayish-Blue);
+}
+
+/* Texts */
+h1 {
+    font-size: 2.5em;
+}
+
+h2,
+h3 {
+    font-size: 1.5em;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--Dark-Grayish-Blue);
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.lead {
+    max-width: 400px;
+    margin: 2rem auto 3rem auto;
+}
+
+.par {
+    max-width: 280px;
+    margin: 1rem auto 2rem auto;
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    padding: 1.16rem 2.66rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    outline: none;
+}
+
+.btn.pr {
+    background-color: var(--Strong-Cyan);
+    box-shadow: 0 3px 12px var(--Strong-Cyan);
+}
+
+.btn.sc {
+    background-color: var(--Light-Blue);
+    box-shadow: 0 3px 12px var(--Light-Blue);
+}
+
+/* Global styles */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.snippets,
+.clipboard,
+.workflow,
+.company,
+.download {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.snippets-content-img img,
+.clipboard img {
+    width: 100%;
+}
+
+/* Mobile styles */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url('./images/bg-header-mobile.png') no-repeat center
+        center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .logo {
+    width: 125px;
+    margin-bottom: 3.5rem;
+}
+
+.snippets-content-img img {
+    margin-bottom: 2.5rem;
+}
+
+.workflow .icon {
+    margin-bottom: 1.5rem;
+}
+
+.company img {
+    display: block;
+    margin: 0 auto 3rem auto;
+}
+
+.footer {
+    padding: 2.5rem 0;
+    text-align: center;
+    background-color: hsl(201, 11%, 96%);
+}
+
+.footer .logo {
+    width: 78px;
+    margin-bottom: 2.5rem;
+}
+
+.footer .links li {
+    margin-bottom: 1.5rem;
+}
+
+.footer .links li:last-child {
+    margin-bottom: 0;
+}
+
+.footer .social {
+    margin-top: 2.5rem;
+}
+
+.footer .social img {
+    margin-right: 1.5rem;
+}
+
+.footer .social img:last-child {
+    margin-right: 0;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+    /* Reset Styles */
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    /* Texts */
+    .lead {
+        max-width: 550px;
+    }
+
+    .par {
+        max-width: 350px;
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-block;
+    }
+
+    .btn.pr {
+        margin-right: 2rem;
+    }
+}
+
+/* Desktop & Large devices styles */
+@media screen and (min-width: 1200px) {
+    /* Reset Styles */
+    html,
+    body {
+        font-size: 16px;
+    }
+
+    /* Global Styles */
+    .snippets-content,
+    .workflow-content,
+    .company,
+    .footer .container,
+    .footer .links {
+        display: grid;
+        align-items: center;
+    }
+
+    /* Sections Styles */
+    .snippets-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .snippets-content-img img {
+        margin-left: -19.5rem;
+    }
+
+    .snippets-content-inner div {
+        text-align: start;
+    }
+
+    .snippets-content-inner .par {
+        margin-left: 0;
+    }
+
+    .workflow-content {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5rem;
+    }
+
+    .company {
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .footer .container {
+        grid-template-columns: auto 60% auto;
+        grid-gap: 2rem;
+    }
+
+    .footer .logo {
+        margin-bottom: 0;
+    }
+
+    .footer .links {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem 0;
+        text-align: start;
+    }
+
+    .footer .links li {
+        margin-bottom: 0;
+    }
+
+    .footer .social {
+        margin-top: 0;
+    }
+}
+
+/* Extra large devices styles */
+@media screen and (min-width: 1440px) {
+    /* Reset Styles */
+    html,
+    body {
+        font-size: 18px;
+    }
+
+    /* Texts */
+    .lead {
+        max-width: 650px;
+    }
+
+    .par {
+        max-width: 350px;
+    }
+}
